@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            Celcius to Fahrenheit converter
+        </title>
+        <style>
+            body{
+                margin: 0px;
+                padding:0px;
+                font-family:'Apple Chancery',cursive ;
+                background-color: rgb(219, 19, 86);
+            }
+
+        h1{
+            color: rgba(240, 236, 241, 0.993);
+            letter-spacing: 1px;
+            text-align: center;
+            font-size:5vw;
+        }
+        h2{
+            color: black;
+            letter-spacing: 1px;
+            text-align: center;
+            font-size:4vw;
+            margin-top:1vh;
+        }
+    
+        input{
+            border-radius: 15px;
+            border: 2px solid black;
+            height: 8vh;
+            width: 35vw;
+            padding-left: 10px; 
+            font-size: 4vw;
+            margin-left: 7vw;
+            align-items: center;
+        }
+        
+        input:active{
+            border: none;
+            background-color: bisque;
+        }
+       
+       
+        #wrapper{
+            background-color: rgb(216, 112, 147);
+            padding: 10px 24px;
+            position: relative;
+            width: 50vw;
+            height: 85vh;
+            margin-top: 5vh;
+            margin-left: 18vw; 
+            margin-right: 15vw;
+            border-radius: 20px;
+            border:2px solid black;
+
+            align-items: center;
+            justify-content: center;
+            
+        }
+        button{
+            margin-top: 5vh;
+            margin-left: 13vw;
+            background-color: green;
+            border-radius: 10px;
+            align-items: center;
+            letter-spacing: 1px;
+            border: none;
+            color: aliceblue;
+            font-size:3vh;
+            height:5vh;
+            width: 23vw;
+
+        }
+        button:hover{
+            cursor: pointer;
+            background-color: rgb(120, 207, 178);
+        }
+        #result{
+            color: rgb(247, 247, 247);
+            font-size: 6vh;
+            margin-left: 11vw;
+            margin-top: 3vh;
+            
+        }
+        @media(min-width:900px){
+        
+        h1{
+            font-size: 5vh;
+        }
+        h2{
+            font-size: 3vh;
+        }
+        input{
+            font-size: 35px;
+        }
+        button{
+            height: 60px;
+            width: 130px;
+            margin-left: 20vw;
+        }
+        #result{
+            margin-left:20vw;
+        }
+   
+    
+    
+}
+       
+        </style>
+    </head>
+    <body>
+        <div id="wrapper">
+         <h1 id="name" >CELCIUS TO FAHRENHEIT CONVERTER</h1>
+         <h2 id="instruct"></h2>
+         <div class="d" >
+                <input type="text" id="input" placeholder="celcius value">
+         </div>
+         <div>
+                <button type="submit" onclick="convert()">submit</button>
+
+         </div>
+         <div id="result">
+
+         </div>
+         </div>
+    <script>
+    function convert(){
+        let conval=Number(document.getElementById("input").value)
+        let fahrenheitval=(9/5*conval)+32
+        let result=document.getElementById("result")
+        result.innerHTML=fahrenheitval +"°F"
+
+    }
+   
+    let message=document.getElementById("instruct")
+    message.innerHTML="Enter the value and submit to get results"
+
+    </script>
+    </body>
+</html>
+
+
+
